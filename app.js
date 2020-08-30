@@ -1,5 +1,5 @@
 const https = require('https');
-const webhook = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=edd023ee-558f-4832-980b-0ea285302255";
+const webhook = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=4241b946-f0cb-41e1-a51d-237d74c091bb";
 
 openNews(
 	JSON.stringify({
@@ -11,14 +11,14 @@ openNews(
 	}),
 	(list) => {
 		if (list.length > 0) {
-			// sendNews(format(list), (res) => {
-			// 	if (res.errcode === 0) {
-			// 		console.log('发送成功', res);
-			// 	} else {
-			// 		console.log('发送失败', res);
-			// 	}
-			// })
-			console.log(list.length);
+			sendNews(format(list), (res) => {
+				if (res.errcode === 0) {
+					console.log('发送成功', res);
+				} else {
+					console.log('发送失败', res);
+				}
+			})
+			console.log(list);
 		} else {
 			console.log('暂无资讯');
 		}
@@ -37,7 +37,6 @@ function format(arr) {
 	arr.forEach(article => {
 		postData.markdown.content = postData.markdown.content + `[${article.article_info.title}](https://juejin.im/post/${article.article_id})\n`;
 	});
-	console.log(postData.markdown.content);
 	return JSON.stringify(postData);
 }
 
