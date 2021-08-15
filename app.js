@@ -11,13 +11,13 @@ openNews(
 	}),
 	(list) => {
 		if (list.length > 0) {
-			sendNews(format(list), (res) => {
-				if (res.errcode === 0) {
-					console.log('发送成功', res);
-				} else {
-					console.log('发送失败', res);
-				}
-			})
+// 			sendNews(format(list), (res) => {
+// 				if (res.errcode === 0) {
+// 					console.log('发送成功', res);
+// 				} else {
+// 					console.log('发送失败', res);
+// 				}
+// 			})
 			console.log(list);
 		} else {
 			console.log('暂无资讯');
@@ -67,13 +67,13 @@ function sendNews(data, cb) {
 // open
 function openNews(data, cb) {
 	const req = https.request(
-		"https://apinew.juejin.im/recommend_api/v1/article/recommend_cate_feed",
+		"https://api.juejin.cn/recommend_api/v1/article/recommend_cate_feed",
 		{
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
-				"referer": "https://juejin.im/frontend?sort=newest",
-				"origin": "https://juejin.im",
+				"referer": "https://juejin.cn/frontend?sort=newest",
+				"origin": "https://juejin.cn",
 				"sec-fetch-dest": "empty",
 				"sec-fetch-mode": "cors",
 				"sec-fetch-site": "same-site",
