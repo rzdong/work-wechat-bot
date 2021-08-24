@@ -11,13 +11,13 @@ openNews(
 	}),
 	(list) => {
 		if (list.length > 0) {
-			sendNews(format(list), (res) => {
-				if (res.errcode === 0) {
-					console.log('发送成功', res);
-				} else {
-					console.log('发送失败', res);
-				}
-			})
+// 			sendNews(format(list), (res) => {
+// 				if (res.errcode === 0) {
+// 					console.log('发送成功', res);
+// 				} else {
+// 					console.log('发送失败', res);
+// 				}
+// 			})
 			console.log(list);
 		} else {
 			console.log('暂无资讯');
