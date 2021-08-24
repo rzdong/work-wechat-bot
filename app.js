@@ -35,7 +35,7 @@ function format(arr) {
 		}
 	}
 	arr.forEach(article => {
-		postData.markdown.content = postData.markdown.content + `[${article.article_info.title}](https://juejin.im/post/${article.article_id})\n`;
+		postData.markdown.content = postData.markdown.content + `[${article.article_info.title}](https://juejin.cn/post/${article.article_id})\n`;
 	});
 	return JSON.stringify(postData);
 }
