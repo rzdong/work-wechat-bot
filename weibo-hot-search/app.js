@@ -50,7 +50,6 @@ function formatHotNum (number) {
 
 // send
 function sendNews(data, cb) {
-  return;
   webhooks.forEach(v => {
     let req = https.request(
       v,
