@@ -25,7 +25,8 @@ function format(arr) {
 	const	postData = {
 		msgtype: "markdown",
 		markdown: {
-			content: `<font color='#1e80ff'>微博热搜</font>\n`
+			// content: `<font color='#1e80ff'>微博热搜</font>\n`
+      content: ''
 		}
 	}
 	arr.slice(0,20).forEach((article, index) => {
