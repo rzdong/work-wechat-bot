@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "deploy": "node app.js"
+    "deploy": "node weibo-hot-search/app.js"
   },
   "author": "rzdong",
   "license": "ISC"
